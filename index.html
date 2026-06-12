@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CicloVerde - Monitoramento Inteligente Agrinho 2026</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <h1>Ciclo<span>Verde</span></h1>
+            <p>Agrinho 2026 • Tecnologia Sustentável no Campo</p>
+        </div>
+        <div class="status-badge" id="geral-status">Horta: Saudável</div>
+    </header>
+
+    <main>
+        <section class="dashboard-grid">
+            <div class="card" id="card-umidade">
+                <h3>Umidade do Solo</h3>
+                <p class="value"><span id="val-umidade">65</span>%</p>
+                <div class="status-indicator ideal">Ideal</div>
+            </div>
+            
+            <div class="card" id="card-temp">
+                <h3>Temperatura</h3>
+                <p class="value"><span id="val-temp">24</span>°C</p>
+                <div class="status-indicator ideal">Ideal</div>
+            </div>
+
+            <div class="card" id="card-luz">
+                <h3>Luz Solar</h3>
+                <p class="value"><span id="val-luz">78</span>%</p>
+                <div class="status-indicator ideal">Ideal</div>
+            </div>
+        </section>
+
+        <section class="details-section">
+            <div class="chart-container">
+                <h3>Histórico de Umidade (Últimas Horas)</h3>
+                <canvas id="historyChart"></canvas>
+            </div>
+
+            <div class="controls-container">
+                <h3>Controle de Irrigação Automatizada</h3>
+                <p>Status da Bomba: <strong id="bomba-status" class="off">Desligada</strong></p>
+                <button id="btn-irrigar" onclick="alternarBomba()">Ativar Irrigação Manual</button>
+                
+                <div class="alerts" id="alert-box">
+                    <h4>Alertas do Sistema</h4>
+                    <p id="alert-text">Nenhuma anomalia detectada. O ecossistema está equilibrado.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Projeto Desenvolvido para o Concurso Agrinho 2026 - Código Aberto no GitHub</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
